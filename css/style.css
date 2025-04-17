@@ -1,0 +1,422 @@
+#entrypoint {
+    /* include font */
+    /* background-color: #C0978B;  */
+    height: 100vh;
+    background-image: url('/images/pexels-aqtai-2013749.jpg');
+    background-size: cover;
+    /* background-position: center; */
+    background-position: 68%;
+    background-repeat: no-repeat;
+
+}
+
+.button-container {
+    display: grid;
+    /* grid-template-columns: 1fr; */
+    /* justify-content: center; */
+    justify-items: center;
+    /* align-items: center; */
+    /* height: 100vh; */
+}
+
+button {
+    background-color: maroon;
+    border: none;
+    color: beige;
+    padding: 0.5em 1.5em;
+    margin-top: 1em; 
+    border-radius: 8px;
+    width: fit-content;
+    max-width: 300px;
+    cursor: pointer;
+    /* padding: 5%;
+    margin-top: 5%;
+    border-radius: 5%; */
+}
+body {
+    /* include font */
+    /* background-color: #632220; */
+    /* background: #4E3323; */
+    /* background: linear-gradient(169deg,rgba(78, 51, 35, 1) 0%, rgba(138, 61, 61, 1) 39%, rgba(193, 161, 120, 1) 100%, rgba(158, 89, 33, 1) 82%, rgba(193, 161, 120, 1) 0%); */
+    background-image: url('/images/pexels-aqtai-2013749.jpg');
+    /* background-size: cover;  */
+    background-size:auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* background-position: 20%; */
+    /* background-position: 90%; */
+    /* background-position: 0% 0%;
+    background-position: fixed; */
+    color: #632220;
+        text-shadow: 2px 2px 8px beige;
+
+
+    height: 100vh;
+}
+
+#main {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 0 5% 5% 5%;
+    /* color: #632220; */
+    /* text-shadow: 2px 2px 8px beige; */
+    /* text-shadow: 2px 2px 8px maroon; */
+    /* color: beige; */
+    color: white;
+    color: black;
+    color: #301817;
+    /* text-shadow: 1px 1px 2px beige; */
+
+    /* color: beige; */
+    /* background-color: blue; */
+}
+
+#main h2 {
+    padding: 3%;
+    /* margin-bottom: 5%; */
+    /* color: white;  */
+    /* color: maroon; */
+    /* text-shadow: none; */
+    /* text-shadow: -1px -1px 0 #f5f5dc, 1px -1px 0 #f5f5dc, -1px 1px 0 #f5f5dc, 1px 1px 0 #f5f5dc; */
+}
+
+#main p {
+    justify-content: center;
+    align-items: center;
+    
+    /* background-color: #4b2e21; */
+    
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    /* color: beige */
+    /* color: #632220; */
+    color: maroon;
+    /* text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); */
+    text-shadow: 2px 2px 8px #f5f5dc;
+    padding-top: 5%;
+
+}
+
+#entry-nav {
+    width: 90%;
+    margin: auto;
+    border-bottom: 3px solid white;
+    padding: 2% 0 3% 0;
+
+}
+
+#entry-nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+}
+
+#entry-nav ul li {
+    text-align: center;
+    align-items: center;
+    align-self: center;
+}
+
+a {
+    text-decoration: none;
+    /* color: beige; */
+    color: #632220;
+    color: maroon;
+    text-shadow: 2px 2px 8px beige;
+
+    font-weight: bold;
+    cursor: pointer;
+    /* text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); */
+    /* text-shadow: 2px 2px 8px beige; */
+}
+
+/* hamburger mobile menu */
+
+/* to outline the div */
+
+/* #mobile * {
+    border: 1px dashed red;
+} */
+
+#header {
+    /* background-color: #632220; */
+    padding: 3%;
+    /* margin: 3%; */
+    /* overflow: hidden; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    align-items: center
+}
+
+
+#header a {
+    grid-column: 1;
+    font-size: 1rem;
+
+}
+
+#header h1 {
+    padding: 5%;
+    font-size: 1rem;
+    text-align: left;
+}
+
+#header .hamburger {
+    grid-column: 2;
+    justify-self: right;
+   
+}
+
+#mobile-menu {
+    display: none;
+}
+
+/* .tea-bucket {
+    background-color: #f5f5dc50;
+    border-radius: 5%; */
+    /* width: 10%; */
+    /* text-align: center; */
+/* } */
+/* 
+.blend-name {
+    background-color: #f5f5dc50;
+    border-radius: 5%;
+} */
+
+/* .tea-group { */
+    /* background-color: #f5f5dc50;
+    border-radius: 5%; */
+    /* padding: 10%;
+    margin: 5%;
+} */
+/* .tea-group {
+    border: 2px solid black;
+} */
+
+/* h2 { */
+    /* margin-bottom: 5%; */
+    /* text-decoration: ; */
+/* } */
+
+#tea-gallery {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 10%;
+    border-radius: 5%;
+    background-color: transparent;
+    background-color: #f5f5dc15;
+    /* color: black; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* padding: 3%;
+    margin: 5%;
+    gap: 5%; */
+}
+
+/* #tea-gallery div {
+    padding: 3%;
+    margin: 5%;
+} */
+
+.tea-group {
+    /* color: blue; */
+    
+}
+
+#tea-gallery .tea-bucket {
+    padding: 3%;
+    margin: 3%
+}
+
+img {
+    width: 40%;
+}
+
+#blend-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* padding: 5%; */
+    margin-top: 5%;
+    padding: 10%;
+    border-radius: 5%;
+    background-color: transparent;
+    background-color: #f5f5dc15;
+}
+
+#blend-gallery div {
+    padding: 3%;
+    /* margin: 3%; */
+}
+
+.blend-description {
+    display: grid;
+    /* grid-template-columns: 1fr; */
+    /* padding: 5%;
+    margin: 5%;
+    gap: 5%; */
+}
+
+h4 {
+    text-decoration: underline;
+}
+
+h5 {
+    cursor: pointer;
+}
+
+h6{ 
+    font-weight: normal;
+    margin: 3%;
+    text-shadow: none;
+}
+
+p {
+    text-shadow: none;
+    margin: 2%;
+}
+
+/* .tea-description {
+    /* display: grid;
+    color: lightblue;
+    font-weight: lighter;
+    grid-template-columns: 1fr 1fr 1fr 1fr; */
+    /* align-items: center;
+    justify-content: center; */
+    
+/* } */ */
+
+
+
+
+
+/* .mobile  */
+
+/* when you hover over these links, they will become bolder */
+
+div {
+    /* background-color: beige; */
+    color: white;
+    padding: 5%;
+    margin: 5%;
+    font-weight: bold;
+    border-radius: 10%;
+    width: 50%;
+    /* align-items: center;
+    justify-content: center; */
+    justify-self: center;
+}
+
+/* hamburger menu */
+
+.hamburger {
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    color: beige;
+    justify-self: end;
+    /* align-items: end;
+    justify-content: end;
+    align-self: self-end; */
+}
+
+/* media query for tablet view */
+
+@media screen and (min-width: 650px) {
+
+    
+
+    #header {
+        grid-template-columns: 1fr 4fr; /* 1 column for heading and 4 for menu */
+    }
+
+    #header h1 {
+        font-size: 1.5rem;
+        text-wrap: nowrap;
+    }
+
+
+    /* #header a {
+        grid-column: 1; Keep "The Optimal Steep" in the first column */
+    /* } */
+
+
+    /* #mobile * {
+        border: 2px dashed red;
+    } */
+
+    #mobile-menu {
+        display: grid;
+        grid-column: 2 / span 4;
+        justify-self: end;
+    }
+    #mobile-menu ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Each li takes one column */
+        justify-items: end;
+        /* margin: 0;
+        padding: 0; */
+        gap: 1rem;
+    }
+
+    #mobile-menu ul li {
+        text-align: right;
+    }
+
+
+    .hamburger {
+        display: none;
+    }
+
+    h2 {
+        font-size: 2rem;
+        /* margin-bottom: 5%; */
+        /* text-decoration: ; */
+    }
+    
+    #tea-gallery {
+        margin-top: 3%;
+        margin-bottom: 3%;
+        padding: 5%;
+    }
+
+    #blend-gallery {
+        /* padding: 5%; */
+        margin-top: 3%;
+        padding: 5%;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media screen and (min-width: 850px) {
+    #header h1 {
+        font-size: 3rem;
+        text-wrap: nowrap;
+    }
+
+    #header h1 a {
+        text-shadow: 2px 2px 8px beige;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+    
+    h4 {
+        font-size: 2rem;
+    }
+
+    /* .tea-gallery {
+        padding: none;
+        margin: none;
+    } */
+
+}
