@@ -2,7 +2,7 @@
     /* include font */
     /* background-color: #C0978B;  */
     height: 100vh;
-    background-image: url('../images/pexels-aqtai-2013749.jpg');
+    background-image: url('./images/pexels-aqtai-2013749.jpg');
     background-size: cover;
     /* background-position: center; */
     background-position: 68%;
@@ -38,7 +38,7 @@ body {
     /* background-color: #632220; */
     /* background: #4E3323; */
     /* background: linear-gradient(169deg,rgba(78, 51, 35, 1) 0%, rgba(138, 61, 61, 1) 39%, rgba(193, 161, 120, 1) 100%, rgba(158, 89, 33, 1) 82%, rgba(193, 161, 120, 1) 0%); */
-    background-image: url('../images/pexels-aqtai-2013749.jpg');
+    background-image: url('./images/pexels-aqtai-2013749.jpg');
     /* background-size: cover;  */
     background-size:auto;
     background-repeat: no-repeat;
