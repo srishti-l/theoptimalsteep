@@ -1,18 +1,25 @@
-.skip a{
+/* SKIP TO MAIN STYLING */
+.skip a {
     position: absolute;
     top: -40px;
+    left: 0;
+    background-color: #000; 
+    color: #fff;
+    padding: 3px 6px; 
+    z-index: 1000;
+    border: 2px solid #fff;
 }
 
 .skip a:focus {
     visibility: visible;
-    top: 20px;
+    top: 10px;
 }
 
 *:focus {
-    /* border: 2px solid white; */
-    color: black;
-    background-color: white;
+    border: 2px solid #7b3e19;
 }
+
+/* GENERAL STYLING */
 
 body {
     font-family: 'Georgia', serif;
@@ -20,94 +27,6 @@ body {
     padding: 0;
     background-color: #f9f6f1;
     color: #341918;
-}
-
-/* index.html styling */
-#entry-header {
-    text-align: center;
-}
-
-#entry-nav {
-    width: 90%;
-    margin: auto;
-    border-bottom: 3px solid #a3c585;
-    padding: 5% 0% 3% 0;
-
-}
-
-#entry-nav a {
-    color: #341918;
-    font-weight: normal;
-}
-
-#slogan {
-    color: #7b3e19;
-    font-style: oblique;
-    font-weight: normal;
-}
-
-@keyframes fadeInUp {
-    0% {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0%);
-        opacity: 1;
-    }
-}
-
-.fadeInUp-animation {
-    animation: fadeInUp 1.5s ease-out forwards;
-    animation-duration: 2s;
-    opacity: 0;
-}
-
-.delay-1 {
-    animation-delay: 0.3s;
-}
-
-.delay-2 {
-    animation-delay: 1s;
-}
-
-.delay-3 {
-    animation-delay: 1.8s;
-}
-
-#entry-nav ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
-    font-weight: normal;
-}
-
-
-
-.image-wrapper {
-    display: grid;
-    place-items: center;
-    margin-top: 2rem;
-}
-
-#main-img {
-    width: 100%;
-    /* max-width: 600px; */
-    height: auto;
-    display: block;
-}
-
-/* GENERAL STYLING */
-
-/* heading styling */
-#entry-heading {
-    text-align: center;
-    font-size: 3.5rem;
-    color: #341918;
-    margin-top: 3%;
-    padding-top: 5%;
-
 }
 
 h2 {
@@ -134,18 +53,19 @@ h4 {
     text-decoration: underline;
 }
 
-h5 {
+h4.tea-grouping {
+    text-decoration: none;
     cursor: pointer;
     font-weight: normal;
     padding-top: 2%;
 }
 
-h5:hover {
+h4.tea-grouping:hover {
     filter: drop-shadow(10px 0 10px #a3c585);
 
 }
 
-h6 {
+h5 {
     font-weight: normal;
     margin: 3%;
     text-shadow: none;
@@ -159,7 +79,6 @@ ul {
 /* link styling */
 a {
     text-decoration: none;
-    /* color: #632220; */
     color: #a3c585;
     text-shadow: 2px 2px 8px beige;
     font-weight: bold;
@@ -214,40 +133,6 @@ button {
 }
 
 
-/* PAGE STYLING: TEAFINDER.HTML */
-
-
-.tea-finder-options {
-    padding: 10%;
-    margin: 3%;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3%;
-    background-color: #ffffff;
-    filter: drop-shadow(0 0 0.50rem #a3c585);
-    border-radius: 10%;
-    overflow: hidden;
-}
-
-/* PAGE STYLING: TEAFINDER.HTML */
-#main,
-#main-home {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 5% 5% 5%;
-}
-
-#main p,
-#main-home p {
-    padding: 2%;
-    margin: 2%;
-}
-
-
-
 /* HAMBURGER MENU FOR MOBILE */
 /* Reference Material:  */
 
@@ -289,6 +174,61 @@ button {
 .active {
     background-color: transparent;
     color: white;
+}
+
+/* PAGE STYLING: INDEX.HTML */
+#entry-header {
+    text-align: center;
+}
+
+#entry-nav {
+    width: 90%;
+    margin: auto;
+    border-bottom: 3px solid #a3c585;
+    padding: 5% 0% 3% 0;
+
+}
+
+#entry-nav a {
+    color: #341918;
+    font-weight: normal;
+}
+
+#slogan {
+    color: #7b3e19;
+    font-style: oblique;
+    font-weight: normal;
+}
+
+
+#entry-nav ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    font-weight: normal;
+}
+
+
+.image-wrapper {
+    display: grid;
+    place-items: center;
+    margin-top: 2rem;
+}
+
+#main-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+#entry-heading {
+    text-align: center;
+    font-size: 3.5rem;
+    color: #341918;
+    margin-top: 3%;
+    padding-top: 5%;
+
 }
 
 /* PAGE STYLING: HOMEPAGE.HTML */
@@ -352,6 +292,36 @@ button {
     text-decoration: none;
 }
 
+/* PAGE STYLING: TEAFINDER.HTML */
+
+.tea-finder-options {
+    padding: 10%;
+    margin: 3%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3%;
+    background-color: #ffffff;
+    filter: drop-shadow(0 0 0.50rem #a3c585);
+    border-radius: 10%;
+    overflow: hidden;
+}
+
+#main,
+#main-home {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 5% 5% 5%;
+}
+
+#main p,
+#main-home p {
+    padding: 2%;
+    margin: 2%;
+}
+
 
 /* PAGE STYLING: TEATYPES.HTML */
 .blend-name {
@@ -362,7 +332,6 @@ button {
     border-radius: 5%;
     padding: 10%;
     margin: 5%;
-    /* border: 2px solid #a3c585; */
     background-color: #ffffff;
     filter: drop-shadow(0 0 0.50rem #a3c585);
 }
@@ -393,9 +362,39 @@ button {
     border-radius: 10%;
 }
 
+/* ANIMATIONS */
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.fadeInUp-animation {
+    animation: fadeInUp 1.5s ease-out forwards;
+    animation-duration: 2s;
+    opacity: 0;
+}
+
+.delay-1 {
+    animation-delay: 0.3s;
+}
+
+.delay-2 {
+    animation-delay: 1s;
+}
+
+.delay-3 {
+    animation-delay: 1.8s;
+}
 
 
-/* media query for tablet view */
+/* MEDIA QUERY: TABLET VIEW */
 
 @media screen and (min-width: 650px) {
 
@@ -406,8 +405,6 @@ button {
     #main-img {
         width: 75%;
         margin-bottom: 2%;
-        /* margin-top: 0; */
-
     }
 
     #slogan {
@@ -457,12 +454,11 @@ button {
     }
 
     /* PAGE STYLING: TEAFINDER.HTML */
-
     /* adjust grid and order of items */
     /* reference:  */
 
     #main {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
         padding: 0 5% 5% 5%;
         grid-template-areas:
             "title title"
@@ -476,7 +472,6 @@ button {
         text-align: center;
         margin: 3%;
         padding: 3%;
-        /* grid-column: 1 / span 2;  */
     }
 
     #main p {
@@ -516,14 +511,12 @@ button {
         font-size: 1.5rem;
     }
 
-  
-
 
     /* PAGE STYLING: TEAFINDER.HTML */
 
     .more-tea-descriptions {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
         gap: 1%;
     }
 
@@ -534,7 +527,6 @@ button {
         padding-bottom: 5%;
         padding-top: 2%;
     }
-
 
     form {
         gap: 0;
@@ -582,7 +574,8 @@ button {
 
 }
 
-/* DEKSTOP */
+/* MEDIA QUERY: DESKTOP VIEW */
+
 @media screen and (min-width: 850px) {
 
     #entry-heading {
@@ -592,7 +585,6 @@ button {
     #main-img {
         width: 60%;
         margin-bottom: 4%;
-        /* margin-top: 0; */
 
     }
 
@@ -623,14 +615,11 @@ button {
     #main_types {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        /* 2 columns */
-        /* gap: 2rem; */
         padding: 2rem;
     }
 
     #main_types>h2 {
         grid-column: 1 / -1;
-        /* Spans across both columns */
         text-align: center;
     }
 
@@ -657,14 +646,27 @@ button {
         padding: 2%;
     }
 
-
-
 }
+
+/* MEDIA QUERY: REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
     .fadeInUp-animation {
         animation: none;
         opacity: 1;
         transform: none;
+    }
+
+    h5 {
+        transition: none;
+    }
+
+
+    .topnav a {
+        transition: none;
+    }
+
+    #quick-links a {
+        transition: none;
     }
 }

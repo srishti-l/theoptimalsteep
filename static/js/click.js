@@ -1,5 +1,7 @@
+
+
 document.querySelector('#tea-form-main').addEventListener('submit', (e) => {
-    e.preventDefault(); // Prevent form from reloading the page
+    e.preventDefault(); 
 
     const healthConcern = document.querySelector('#health_concern').value;
 

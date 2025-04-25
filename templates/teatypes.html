@@ -16,12 +16,15 @@
     <div class="skip" tabindex="0"><a href="#main_types">Skip to Main Content</a></div>
     <header>
         <div class="topnav">
-            <a href="{{ url_for('index') }}"><h1>The Optimal Steep</h1></a>
+            <a href="{{ url_for('index') }}">
+                <h1>The Optimal Steep</h1>
+            </a>
             <div id="myLinks">
                 <a href="{{ url_for('homepage') }}">About</a>
                 <a href="{{ url_for('teafinder') }}">Tea Finder </a>
                 <a href="{{ url_for('teatypes') }}" class="active">Tea Types</a>
             </div>
+
             <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
             <a href="javascript:void(0);" class="icon" onclick="myFunction()" aria-label="Toggle navigation menu">
                 <i class="fa fa-bars" aria-hidden="true"></i>
@@ -30,17 +33,23 @@
     </header>
     <main class="container" id="main_types">
         <h2>Learn More about the Different Types of Tea</h2>
+
+        <!-- div for general tea types -->
         <div class="tea-group">
             <h3 id="general-tea">General Tea Types</h3>
+
+            <!-- div for gallery -->
             <div id="tea-gallery">
             </div>
 
         </div>
+
+        <!-- div for herbal tea blends -->
         <div class="tea-group">
             <h3 id="blend-tea">Additional Blends</h3>
 
+            <!-- div for gallery -->
             <div id="blend-gallery">
-
             </div>
 
         </div>

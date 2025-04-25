@@ -1,4 +1,3 @@
-<!-- page for tea finder -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,31 +22,41 @@
                 <a href="{{ url_for('teafinder') }}" class="active">Tea Finder </a>
                 <a href="{{ url_for('teatypes') }}">Tea Types</a>
             </div>
+
             <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
             <a href="javascript:void(0);" class="icon" onclick="myFunction()" aria-label="Toggle navigation menu">
                 <i class="fa fa-bars" aria-hidden="true"></i>
             </a>
         </div>
     </header>
+
     <main class="container" id="main">
         <h2> Find Your Optimal Tea </h2>
         <section class='tea-finder-options one-concern' id="one">
             <h3 id="one-concern">Select Tea Based on One Health Concern</h3>
+
+            <!-- divs for form inputs & recommendations  -->
             <div id="one-concern-rec"></div>
             <div id="recommendations"></div>
         </section>
         <section class='tea-finder-options multiple-concerns' id="multi">
             <h3 id="multiple-concerns">Select Tea Based on Multiple Health Concerns</h3>
+
+            <!-- divs for form inputs & recommendations  -->
             <div id="multiple-concerns-div"></div>
             <div id="optimal-recommendations"></div>
         </section>
         <section class='tea-finder-options tea-characteristics' id="tea-chars">
             <h3 id="tea-characteristics">Explore Teas by Different Characteristics</h3>
+
+            <!-- divs for form inputs & recommendations  -->
             <div id="characteristics-div"></div>
             <div id="characteristic-recommendations"></div>
         </section>
         <section class='tea-finder-options compare-teas' id="two-compare">
             <h3 id="compare-teas">Compare Two Teas By A Chosen Characteristic</h3>
+
+            <!-- divs for form inputs & recommendations  -->
             <div id="compare-teas-div"></div>
             <div id="tea-comparison-facts"></div>
         </section>

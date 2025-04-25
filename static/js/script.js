@@ -1,10 +1,10 @@
-
-
 // JavaScript to handle form submission and display results
 
+// functions for one concern
 document.querySelector('#one-concern').addEventListener('click', (e) => {
     const container = document.querySelector('#one-concern-rec')
-    if (container.innerHTML == '') {
+    const result = document.querySelector('#recommendations');
+    if (container.innerHTML == '' && result.innerHTML == '') {
         container.innerHTML = `
         <form id="tea-form">
                     <label for="health_concern">Enter a health concern (e.g., "anti-anxiety effects"):</label>
@@ -49,6 +49,7 @@ document.querySelector('#one-concern').addEventListener('click', (e) => {
 
     } else {
         container.innerHTML = '';
+        result.innerHTML = '';
     }
 
 
@@ -56,7 +57,8 @@ document.querySelector('#one-concern').addEventListener('click', (e) => {
 
 document.querySelector('#multiple-concerns').addEventListener('click', () => {
     const container = document.querySelector('#multiple-concerns-div');
-    if (container.innerHTML == '') {
+    const result = document.querySelector('#optimal-recommendations');
+    if (container.innerHTML == '' && result.innerHTML == '') {
         container.innerHTML = `
         <form id="multi-tea-form">
         <label for="concern_one">Primary Concern*</label>
@@ -112,15 +114,18 @@ document.querySelector('#multiple-concerns').addEventListener('click', () => {
 
     } else {
         container.innerHTML = '';
+        result.innerHTML = '';
     }
 
 
 })
 
+// update HTML for tea by characteristic 
 
 document.querySelector('#tea-characteristics').addEventListener('click', () => {
-    const container = document.querySelector('#characteristics-div')
-    if (container.innerHTML == '') {
+    const container = document.querySelector('#characteristics-div'); 
+    const result = document.querySelector('#characteristic-recommendations');
+    if (container.innerHTML == '' && result.innerHTML === '') {
         container.innerHTML = `
         <form id="tea-characteristic-form">
         <label for="characteristic">Tea Characteristic*</label>
@@ -165,14 +170,17 @@ document.querySelector('#tea-characteristics').addEventListener('click', () => {
 
     } else {
         container.innerHTML = '';
+        result.innerHTML = '';
     }
 
 })
 
+// update HTML for tea compare
 
 document.querySelector('#compare-teas').addEventListener('click', () => {
     const container = document.querySelector('#compare-teas-div');
-    if (container.innerHTML == '') {
+const result = document.querySelector('#tea-comparison-facts');
+    if (container.innerHTML == '' && result.innerHTML == '') {
         container.innerHTML = `
         <form id="tea-compare-form">
             <label for="tea-one">Enter first tea type:</label>
@@ -213,8 +221,8 @@ document.querySelector('#compare-teas').addEventListener('click', () => {
                         recommendationsDiv.innerHTML = `
                     <h3>Comparison Based on ${criteria}:</h3>
                     <ul>
-                        <li>${data.tea_one.name}: ${data.tea_one.value}</li>
-                        <li>${data.tea_two.name}: ${data.tea_two.value}</li>
+                        <li>${tea_one}: ${data.recommended_teas[0]}</li>
+                        <li>${tea_two}: ${data.recommended_teas[1]}</li>
                     </ul>
                 `;
                     }
@@ -226,6 +234,7 @@ document.querySelector('#compare-teas').addEventListener('click', () => {
 
     } else {
         container.innerHTML = '';
+         result.innerHTML = '';
     }
 
 

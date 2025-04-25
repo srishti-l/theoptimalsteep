@@ -11,6 +11,8 @@
 </head>
 
 <body>
+    <div class="skip" tabindex="0"><a href="#main-home">Skip to Main Content</a></div>
+
     <header>
         <div class="topnav">
             <a href="{{ url_for('index') }}"><h1>The Optimal Steep</h1></a>
@@ -20,6 +22,7 @@
                 <a href="{{ url_for('teafinder') }}">Tea Finder </a>
                 <a href="{{ url_for('teatypes') }}">Tea Types</a>
             </div>
+
             <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
             <a href="javascript:void(0);" class="icon" onclick="myFunction()" aria-label="Toggle navigation menu">
                 <i class="fa fa-bars" aria-hidden="true"></i>
@@ -43,10 +46,12 @@
                 <button type="submit">Get Tea Recommendations</button>
             </form>
 
+            <!-- div for tea inputs -->
             <div id="recommendations"></div>
 
         </section>
 
+        <!-- Quick Links for users to cccess -->
         <section id="quick-links">
             <h3>Quick Links</h3>
             <h4>For more advanced search, go to our <a href="{{ url_for('teafinder') }}">Tea Finder</a></h>
@@ -57,7 +62,6 @@
                 <li><a href="teafinder.html#tea-chars">Filter By Specified Characteristics</a></li>
                 <li><a href="teafinder.html#two-compare">Compare Two Teas by Characteristic</a></li>
             </ul>
-
         </section>
     </main>
 

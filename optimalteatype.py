@@ -50,8 +50,6 @@ class MyGraph:
                 self.G.add_node(category_name, type="category")
                 for tea_key, tea_data in info["types"].items():
                     tea_name = tea_data.get("name", tea_key).strip().lower()
-                    # caffeine = tea_data.get("caffeine", "N/A")
-                    # print(f"Debug: {tea_name.title()} caffeine: {caffeine}")
                     self.G.add_node(
                         tea_name,
                         type="tea",
@@ -81,7 +79,6 @@ class MyGraph:
 
             for tea in teas:
                 self.G.add_node(tea, type="tea")
-                # self.G.add_edge(tea, benefit)
                 for benefit in benefits: 
                     self.G.add_node(benefit, type="health")
                     self.G.add_edge(tea, benefit)
@@ -177,7 +174,6 @@ class MyGraph:
         for node in self.G.nodes:
             node_type = self.G.nodes[node].get("type")
             if keyword in node.lower() and node_type in ["taste", "origin", "caffeine", "health"]:
-                # Find teas connected to this characteristic
                 teas = [
                     tea for tea in self.G.neighbors(node)
                     if self.G.nodes[tea].get("type") == "tea"
@@ -232,7 +228,7 @@ class MyGraph:
         if tea_node in self.G.nodes:
             node_data = self.G.nodes[tea_node]
         
-        # Special handling for caffeine attribute
+    
             if attribute == "caffeine":
                 if "types" in node_data:  
                     caffeine_values = []
@@ -251,7 +247,6 @@ class MyGraph:
         return "N/A"
     
     def find_teas(self, health_concerns, taste_preference=None):
-        # Get tea nodes connected to each health concern
         tea_sets = []
         for concern in health_concerns:
             concern_node = self.find_closest_node(concern)
@@ -266,13 +261,11 @@ class MyGraph:
             print(f"No teas found for any of: {health_concerns}")
             return []
 
-        # Intersect all sets to get teas that help with *all* concerns
         common_teas = set.intersection(*tea_sets)
         if not common_teas:
             print(f"No teas found that help with all of: {health_concerns}")
             return []
 
-        # Filter by taste if needed
         if taste_preference:
             matching_teas = []
             for tea in common_teas:
@@ -281,7 +274,7 @@ class MyGraph:
                     matching_teas.append(tea)
 
             if matching_teas:
-                print(f"✅ Teas for {health_concerns} with taste '{taste_preference}':")
+                print(f"Teas for {health_concerns} with taste '{taste_preference}':")
                 for t in matching_teas:
                     print(f"{t.title()}")
                 return matching_teas
@@ -291,9 +284,9 @@ class MyGraph:
                     print(f"{t.title()}")
                 return list(common_teas)
         
-        print(f"✅ Teas matching all health concerns {health_concerns}:")
+        print(f"Teas matching all health concerns {health_concerns}:")
         for t in common_teas:
-            print(f"🍵 {t.title()}")
+            print(f" {t.title()}")
         return list(common_teas)
 
 
@@ -331,8 +324,6 @@ class TeaTypes:
                     print(f"Taste: {tea_info.get('tasteDescription', 'N/A')}")
                     print(f"Caffeine: {tea_info.get('caffeine', 'N/A')}")
             else:
-                # Handle categories like 'blends' that may not have 'types' key
-                # print("This category doesn't have 'types' listed, but here is some data:")
                 for key, value in info.items():
                     try:
                         print(f"\nTea: {value.get('name', 'Unknown')} \nOrigin: {value.get('origin', 'Unknown')} \nTaste: {value.get('tasteDescription', 'Unknown')} \nCaffeine: {value.get('caffeine', 'Unknown')}")
@@ -347,7 +338,7 @@ if __name__ == "__main__":
     
     with open("static/teabenefits.csv", newline="") as csvfile:
         reader = csv.DictReader(csvfile)
-        benefit_data = list(reader)  # So we can loop through it multiple times
+        benefit_data = list(reader) 
 
 
     graph.build_graph(data, benefit_data)
@@ -381,8 +372,3 @@ if __name__ == "__main__":
 
     print()
     graph.find_teas(["Reducing inflammation in the body", "Improving circulation"], taste_preference="minty")
-
-    # graph.recommend_tea_by_taste_and_health("fruity", "digestion")
-    # graph.recommend_tea_by_taste_and_health("earthy", "anti-anxiety effects")
-    # graph.recommend_tea_by_taste_and_health("sweet", "Weight management")
-    # graph.recommend_tea_by_taste_and_health("minty", "focus")

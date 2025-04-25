@@ -2,28 +2,24 @@ fetch('static/teadata.json')
   .then((response) => response.json())
 
   .then(data => {
-    // console.log(data);
     const gallery = document.querySelector('#tea-gallery');
     const blend_gallery = document.querySelector('#blend-gallery');
 
     Object.entries(data).forEach(([key, tea]) => {
       if (key === 'blends') {
-        const blendDiv = document.createElement('div');
 
         Object.entries(tea).forEach(blend => {
-          // console.log(blend)
           const blendName = document.createElement('div');
           blendName.className = 'blend-name';
-          blendName.innerHTML = `<h5>${blend[1].name}</53>`
+          blendName.innerHTML = `<h4 class='tea-grouping'>${blend[1].name}</h4>`
           blend_gallery.appendChild(blendName)
 
           blendName.addEventListener('click', () => {
-            // console.log('works');
             if (!blendName.querySelector('.blend-description')) {
               const blendInfo = document.createElement('div');
               blendInfo.className = 'blend-description';
               blendInfo.innerHTML =
-                `<h6>${blend[1].description}</h6>
+                `<h5>${blend[1].description}</h5>
                   <p>Origin: ${blend[1].origin}</p>
                   <p>Taste Profile: ${blend[1].tasteDescription}</p>
                   <p>Caffeine: ${blend[1].caffeineLevel}, ${blend[1].caffeine}</p>
@@ -42,73 +38,22 @@ fetch('static/teadata.json')
 
       }
 
-
-
-      // if (tea.name && key !== 'unknown') {
-      //   const teaDiv = document.createElement('div');
-      //   teaDiv.className = 'tea-bucket';
-      //   // console.log(tea.name)
-      //   teaDiv.innerHTML = `<h5 class='tea-grouping'>${tea.name}</h5>
-      //       `;
-      //   gallery.appendChild(teaDiv);
-      //   // console.log(tea)
-      //   // console.log(tea.types)
-      //   // console.log(tea.types)
-      //   const the_teas = tea.types
-      //   // console.log(the_teas)
-      //   teaDiv.addEventListener('click', () => {
-      //     console.log(tea.types)
-
-      //     // the_teas.forEach(t => {
-      //     //   console.log(t.types.name)
-
-      //     // })
-
-      //     // Prevent multiple descriptions
-      //     if (!teaDiv.querySelector('.tea-description')) {
-      //       const teaInfo = document.createElement('div');
-      //       teaInfo.className = 'tea-description';
-      //       teaInfo.innerHTML = `<h6>${tea.types.name}</h6>
-
-
-
-      //       `
-      //       // teaInfo.innerHTML =
-      //       //   `<h6>${tea.description}</h6>
-      //       //         <p>Origin: ${tea.origin}</p>
-      //       //         <p>Taste Profile: ${tea.tasteDescription}</p>
-      //       //         <p>Caffeine: ${tea.caffeineLevel}, ${tea.caffeine}</p>
-      //       //         `
-      //       //   || 'No description available.';
-
-
-      //       teaDiv.appendChild(teaInfo);
-      //     } else {
-      //       teaDiv.querySelector('.tea-description').remove();
-      //     }
-      //   });
-
-
-      // }
-
       if (tea.name && key !== 'unknown') {
         const teaDiv = document.createElement('div');
         teaDiv.className = 'tea-bucket';
 
-        // Create tea group header
-        teaDiv.innerHTML = `<h5 class='tea-grouping'>${tea.name}</h5>`;
+        teaDiv.innerHTML = `<h4 class='tea-grouping'>${tea.name}</h4>`;
         gallery.appendChild(teaDiv);
 
-        // Click to toggle types
         teaDiv.addEventListener('click', () => {
           if (!teaDiv.querySelector('.tea-description')) {
             const teaInfo = document.createElement('div');
             teaInfo.className = 'tea-description';
-            teaInfo.innerHTML = `<h6>${tea.types.name}</h6>
+            teaInfo.innerHTML = `<h5>${tea.types.name}</h5>
             
             `
             teaInfo.innerHTML =
-              `<h6>${tea.description}</h6>
+              `<h5>${tea.description}</h5>
                   <p>Origin: ${tea.origin}</p>
                   <p>Taste Profile: ${tea.tasteDescription}</p>
                   <p>Caffeine: ${tea.caffeineLevel}, ${tea.caffeine}</p>
@@ -125,7 +70,6 @@ fetch('static/teadata.json')
                 return;
               }
               e.target.textContent = 'Collapse Menu'
-              // teaDiv.querySelector('.tea-description').remove();
               console.log('click worked');
               
               const moreTeaInfo = document.createElement('div');
@@ -165,33 +109,6 @@ fetch('static/teadata.json')
         
       }
 
-      
-
-
-
-      // Add click to show description
-      //   teaDiv.addEventListener('click', () => {
-      //     // Prevent multiple descriptions
-      //     if (!teaDiv.querySelector('.tea-description')) {
-      //       const teaInfo = document.createElement('div');
-      //       teaInfo.className = 'tea-description';
-      //       teaInfo.innerHTML =
-      //         `<h6>${tea.description}</h6>
-      //               <p>Origin: ${tea.origin}</p>
-      //               <p>Taste Profile: ${tea.tasteDescription}</p>
-      //               <p>Caffeine: ${tea.caffeineLevel}, ${tea.caffeine}</p>
-      //               `
-      //         || 'No description available.';
-
-
-      //       teaDiv.appendChild(teaInfo);
-      //     } else {
-      //       teaDiv.querySelector('.tea-description').remove();
-      //     }
-      //   });
-
-
-      // }
     });
   });
 

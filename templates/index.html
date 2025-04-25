@@ -13,25 +13,29 @@
 <body id="entrypoint">
     <div class="skip" tabindex="0"><a href="#main">Skip to Main Content</a></div>
     <header id="entry-header">
-        
-        <!-- <div class="skip" tabindex="0"><a href="#welcome">Skip to Main Content</a></div> -->
-        <nav id="entry-nav">
-                <ul>
-                    <li><a href="{{ url_for('homepage') }}">About Us</a></li>
-                    <li><a href="{{ url_for('teafinder') }}">Tea Finder</a></li>
-                    <li><a href="{{ url_for('teatypes') }}">Tea Types</a></li>
-                </ul>
-                
 
+        <nav id="entry-nav">
+            <ul>
+                <li><a href="{{ url_for('homepage') }}">About Us</a></li>
+                <li><a href="{{ url_for('teafinder') }}">Tea Finder</a></li>
+                <li><a href="{{ url_for('teatypes') }}">Tea Types</a></li>
+            </ul>
         </nav>
-        <a href="{{ url_for('index') }}"><h1 class="fadeInUp-animation delay-1" id="entry-heading">The Optimal Steep</h1></a>
-        </header>
+
+        <a href="{{ url_for('index') }}">
+            <h1 class="fadeInUp-animation delay-1" id="entry-heading">The Optimal Steep</h1>
+        </a>
+
+    </header>
     <main class="entry-container" id="main">
         <div class="image-wrapper main-img-wrapper">
-            <img id='main-img' class="fadeInUp-animation delay-2" src="{{ url_for('static', filename='images/pexels-aqtai-2013749.jpg')}}" alt="image of a steaming cup of tea in a glass on a table"/>
+            <!-- free image from Pexels -->
+            <img id='main-img' class="fadeInUp-animation delay-2"
+                src="{{ url_for('static', filename='images/pexels-aqtai-2013749.jpg')}}"
+                alt="image of a steaming cup of tea in a glass on a table" />
         </div>
         <h2 id="slogan" class="fadeInUp-animation delay-3">Your Personalized Tea Finder</h2>
-        
+
 
     </main>
     <footer>
