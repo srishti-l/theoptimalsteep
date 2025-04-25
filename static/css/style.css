@@ -1,0 +1,670 @@
+.skip a{
+    position: absolute;
+    top: -40px;
+}
+
+.skip a:focus {
+    visibility: visible;
+    top: 20px;
+}
+
+*:focus {
+    /* border: 2px solid white; */
+    color: black;
+    background-color: white;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f6f1;
+    color: #341918;
+}
+
+/* index.html styling */
+#entry-header {
+    text-align: center;
+}
+
+#entry-nav {
+    width: 90%;
+    margin: auto;
+    border-bottom: 3px solid #a3c585;
+    padding: 5% 0% 3% 0;
+
+}
+
+#entry-nav a {
+    color: #341918;
+    font-weight: normal;
+}
+
+#slogan {
+    color: #7b3e19;
+    font-style: oblique;
+    font-weight: normal;
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.fadeInUp-animation {
+    animation: fadeInUp 1.5s ease-out forwards;
+    animation-duration: 2s;
+    opacity: 0;
+}
+
+.delay-1 {
+    animation-delay: 0.3s;
+}
+
+.delay-2 {
+    animation-delay: 1s;
+}
+
+.delay-3 {
+    animation-delay: 1.8s;
+}
+
+#entry-nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    font-weight: normal;
+}
+
+
+
+.image-wrapper {
+    display: grid;
+    place-items: center;
+    margin-top: 2rem;
+}
+
+#main-img {
+    width: 100%;
+    /* max-width: 600px; */
+    height: auto;
+    display: block;
+}
+
+/* GENERAL STYLING */
+
+/* heading styling */
+#entry-heading {
+    text-align: center;
+    font-size: 3.5rem;
+    color: #341918;
+    margin-top: 3%;
+    padding-top: 5%;
+
+}
+
+h2 {
+    margin: 8% 0 5% 0;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #341918;
+}
+
+h3 {
+    margin: 3%;
+    margin: 3%;
+    cursor: pointer;
+}
+
+h3#general-tea, h3#general-tea  {
+    /* font-weight: normal; */
+    /* margin: 1%; */
+    /* padding: 3%; */
+    text-decoration: underline;
+}
+
+h4 {
+    text-decoration: underline;
+}
+
+h5 {
+    cursor: pointer;
+    font-weight: normal;
+    padding-top: 2%;
+}
+
+h5:hover {
+    filter: drop-shadow(10px 0 10px #a3c585);
+
+}
+
+h6 {
+    font-weight: normal;
+    margin: 3%;
+    text-shadow: none;
+}
+
+/* list styling */
+ul {
+    list-style-type: none;
+}
+
+/* link styling */
+a {
+    text-decoration: none;
+    /* color: #632220; */
+    color: #a3c585;
+    text-shadow: 2px 2px 8px beige;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+/* GENERAL PAGE STYLING */
+
+main {
+    padding: 10%;
+    text-align: center;
+}
+
+footer {
+    background-color: #a3c585;
+    color: #341918;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+
+/* FORM STYLING */
+
+input {
+    margin: 2%;
+    border: #34191875 2px solid;
+}
+
+form {
+    display: grid;
+    gap: 2%;
+    /* gap: 1rem; */
+    justify-items: center;
+}
+
+/* BUTTON STYLING */
+
+button {
+    display: grid;
+    background-color: #7b3e19;
+    color: white;
+    padding: 4%;
+    border: none;
+    border-radius: 10%;
+    width: fit-content;
+    cursor: pointer;
+}
+
+
+/* PAGE STYLING: TEAFINDER.HTML */
+
+
+.tea-finder-options {
+    padding: 10%;
+    margin: 3%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3%;
+    background-color: #ffffff;
+    filter: drop-shadow(0 0 0.50rem #a3c585);
+    border-radius: 10%;
+    overflow: hidden;
+}
+
+/* PAGE STYLING: TEAFINDER.HTML */
+#main,
+#main-home {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 5% 5% 5%;
+}
+
+#main p,
+#main-home p {
+    padding: 2%;
+    margin: 2%;
+}
+
+
+
+/* HAMBURGER MENU FOR MOBILE */
+/* Reference Material:  */
+
+.topnav {
+    overflow: hidden;
+    background-color: #d4e6c3;
+    position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+    display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+    color: #341918;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+    background-color: #fff;
+    color: black;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+    background-color: transparent;
+    color: white;
+}
+
+/* PAGE STYLING: HOMEPAGE.HTML */
+
+#tea-form {
+    margin: 3%;
+    padding-bottom: 5%;
+    padding-top: 2%;
+}
+
+#tea-form-main {
+
+    background-color: #ffffff;
+    filter: drop-shadow(0 0 0.50rem #a3c585);
+    border-radius: 10%;
+    margin: 3%;
+    padding: 5% 0 10% 0;
+}
+
+
+#tea-form label {
+    padding: 3%;
+}
+
+#tea-form-main label {
+    padding: 1%;
+}
+
+.tea-finder-options {
+    padding: 10%;
+    margin: 3%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3%;
+    border-radius: 10%;
+}
+
+
+#quick-links {
+    padding: 3%;
+    display: grid;
+}
+
+#quick-links ul li {
+    padding: 1%;
+}
+
+#quick-links a:hover {
+    filter: drop-shadow(10px 0 5px #a3c585);
+
+}
+
+#quick-links a {
+    font-weight: bold;
+    color: #7b3e19;
+}
+
+
+#quick-links h4 {
+    font-weight: normal;
+    text-decoration: none;
+}
+
+
+/* PAGE STYLING: TEATYPES.HTML */
+.blend-name {
+    border-radius: 5%;
+}
+
+.tea-group {
+    border-radius: 5%;
+    padding: 10%;
+    margin: 5%;
+    /* border: 2px solid #a3c585; */
+    background-color: #ffffff;
+    filter: drop-shadow(0 0 0.50rem #a3c585);
+}
+
+
+#tea-gallery,
+#blend-gallery {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 5%;
+    background-color: transparent;
+    background-color: #f5f5dc15;
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 100%;
+}
+
+.more_content {
+    display: block;
+    margin: 1% auto;
+}
+
+.tea-description,
+.blend-description {
+    background-color: #a3c58550;
+    padding: 3%;
+    margin: 3%;
+    border-radius: 10%;
+}
+
+
+
+/* media query for tablet view */
+
+@media screen and (min-width: 650px) {
+
+    #entry-heading{
+        font-size: 2rem;
+    }
+
+    #main-img {
+        width: 75%;
+        margin-bottom: 2%;
+        /* margin-top: 0; */
+
+    }
+
+    #slogan {
+        font-size: 1.5rem;
+    }
+
+    #entry-nav a {
+        font-weight: bold;
+    }
+
+    button {
+        padding: 2%;
+    }
+
+    /* navigation styling, remove hamburger menu */
+    .topnav {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        justify-content: end;
+        align-items: end;
+        padding: 0 1%;
+    }
+
+    /* show navigation links outside of hamburger */
+    .topnav a {
+        font-size: 1rem;
+    }
+
+    /* adjust font for logo */
+    .topnav>a:first-child {
+        font-size: 1.5rem;
+    }
+
+    /* grid layout for nav links */
+    .topnav #myLinks {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        justify-content: end;
+        align-items: end;
+        font-size: 0.5rem;
+    }
+
+
+    /* remove hamburger icon */
+    .topnav a.icon {
+        display: none;
+    }
+
+    /* PAGE STYLING: TEAFINDER.HTML */
+
+    /* adjust grid and order of items */
+    /* reference:  */
+
+    #main {
+        grid-template-columns: 1fr 1fr;
+        padding: 0 5% 5% 5%;
+        grid-template-areas:
+            "title title"
+            "image image"
+            "one compare"
+            "multi characteristics";
+    }
+
+    #main h2 {
+        grid-area: title;
+        text-align: center;
+        margin: 3%;
+        padding: 3%;
+        /* grid-column: 1 / span 2;  */
+    }
+
+    #main p {
+        padding: 3%;
+        margin: 3%;
+    }
+
+    .main-img-wrapper {
+        grid-area: image;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .one-concern {
+        grid-area: one;
+    }
+
+    .compare-teas {
+        grid-area: compare;
+    }
+
+    .multiple-concerns {
+        grid-area: multi;
+    }
+
+    .tea-characteristics {
+        grid-area: characteristics;
+    }
+
+    h3,
+    h5 {
+        font-size: 1.25rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+  
+
+
+    /* PAGE STYLING: TEAFINDER.HTML */
+
+    .more-tea-descriptions {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1%;
+    }
+
+    /* PAGE STYLING: HOMEPAGE.HTML */
+
+    #tea-form,
+    #tea-form label {
+        padding-bottom: 5%;
+        padding-top: 2%;
+    }
+
+
+    form {
+        gap: 0;
+    }
+
+
+    #quick-links a:hover {
+        filter: drop-shadow(0 0 1.5rem #a3c585);
+
+    }
+
+    #quick-links a {
+        font-weight: normal;
+    }
+
+
+    #quick-links h3 {
+        font-weight: bold;
+        font-size: 1.25rem;
+    }
+
+    #quick-links h4 {
+        font-size: 1rem;
+    }
+
+    #quick-links ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        padding: 0;
+        list-style-type: none;
+        text-align: center;
+        margin-top: 3%;
+    }
+
+    #quick-links li a {
+        display: block;
+        padding: 0.5rem;
+        background-color: #a3c58550;
+        border-radius: 8px;
+        color: #341918;
+        text-decoration: none;
+        text-shadow: none;
+    }
+
+}
+
+/* DEKSTOP */
+@media screen and (min-width: 850px) {
+
+    #entry-heading {
+        font-size: 2.5rem;
+    }
+
+    #main-img {
+        width: 60%;
+        margin-bottom: 4%;
+        /* margin-top: 0; */
+
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    #tea-form h3,
+    #quick-links h3,
+    #tea-form-main h3 {
+        font-size: 1.5rem;
+    }
+
+    #main p,
+    #main-home p {
+        padding: 0;
+    }
+
+    #quick-links {
+        padding-top: 0;
+
+    }
+
+    button {
+        padding: 1.5%;
+    }
+
+    #main_types {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns */
+        /* gap: 2rem; */
+        padding: 2rem;
+    }
+
+    #main_types>h2 {
+        grid-column: 1 / -1;
+        /* Spans across both columns */
+        text-align: center;
+    }
+
+
+    #main_types .tea-group {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        gap: 0.5rem;
+    }
+
+    .tea-finder-options {
+        padding: 18%;
+    }
+
+    #main h2 {
+        padding: 0;
+    }
+
+    .tea-description {
+        padding: 10%;
+    }
+
+    .tea-description p {
+        padding: 2%;
+    }
+
+
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fadeInUp-animation {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}

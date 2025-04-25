@@ -1,0 +1,63 @@
+<!-- page for tea finder -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" type="image/png" href="images/logo-drk.png"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/html5reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Tea Time</title>
+</head>
+
+<body>
+    <div class="skip" tabindex="0"><a href="#main">Skip to Main Content</a></div>
+    <header>
+        <div class="topnav">
+            <a href="{{ url_for('index') }}"><h1>The Optimal Steep</h1></a>
+            <!-- Navigation links (hidden by default) -->
+            <div id="myLinks">
+                <a href="{{ url_for('homepage') }}">About</a>
+                <a href="{{ url_for('teafinder') }}" class="active">Tea Finder </a>
+                <a href="{{ url_for('teatypes') }}">Tea Types</a>
+            </div>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()" aria-label="Toggle navigation menu">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </a>
+        </div>
+    </header>
+    <main class="container" id="main">
+        <h2> Find Your Optimal Tea </h2>
+        <section class='tea-finder-options one-concern' id="one">
+            <h3 id="one-concern">Select Tea Based on One Health Concern</h3>
+            <div id="one-concern-rec"></div>
+            <div id="recommendations"></div>
+        </section>
+        <section class='tea-finder-options multiple-concerns' id="multi">
+            <h3 id="multiple-concerns">Select Tea Based on Multiple Health Concerns</h3>
+            <div id="multiple-concerns-div"></div>
+            <div id="optimal-recommendations"></div>
+        </section>
+        <section class='tea-finder-options tea-characteristics' id="tea-chars">
+            <h3 id="tea-characteristics">Explore Teas by Different Characteristics</h3>
+            <div id="characteristics-div"></div>
+            <div id="characteristic-recommendations"></div>
+        </section>
+        <section class='tea-finder-options compare-teas' id="two-compare">
+            <h3 id="compare-teas">Compare Two Teas By A Chosen Characteristic</h3>
+            <div id="compare-teas-div"></div>
+            <div id="tea-comparison-facts"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 The Optimal Steep</p>
+
+    </footer>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/hamburger.js') }}"></script>
+</body>
+
+</html>

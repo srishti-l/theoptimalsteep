@@ -1,0 +1,58 @@
+<!-- page for gallery of tea types -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" type="image/png" href="images/logo-drk.png"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/html5reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Tea Time</title>
+</head>
+
+<body>
+    <div class="skip" tabindex="0"><a href="#main_types">Skip to Main Content</a></div>
+    <header>
+        <div class="topnav">
+            <a href="{{ url_for('index') }}"><h1>The Optimal Steep</h1></a>
+            <div id="myLinks">
+                <a href="{{ url_for('homepage') }}">About</a>
+                <a href="{{ url_for('teafinder') }}">Tea Finder </a>
+                <a href="{{ url_for('teatypes') }}" class="active">Tea Types</a>
+            </div>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()" aria-label="Toggle navigation menu">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </a>
+        </div>
+    </header>
+    <main class="container" id="main_types">
+        <h2>Learn More about the Different Types of Tea</h2>
+        <div class="tea-group">
+            <h3 id="general-tea">General Tea Types</h3>
+            <div id="tea-gallery">
+            </div>
+
+        </div>
+        <div class="tea-group">
+            <h3 id="blend-tea">Additional Blends</h3>
+
+            <div id="blend-gallery">
+
+            </div>
+
+        </div>
+
+
+    </main>
+    <footer>
+        <p>&copy; 2025 The Optimal Steep</p>
+
+    </footer>
+    <script src="{{ url_for('static', filename='js/teagallery.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/hamburger.js') }}"></script>
+</body>
+
+</html>

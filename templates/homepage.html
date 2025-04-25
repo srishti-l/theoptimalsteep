@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Optimal Steep</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/html5reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="topnav">
+            <a href="{{ url_for('index') }}"><h1>The Optimal Steep</h1></a>
+            
+            <div id="myLinks">
+                <a href="{{ url_for('homepage') }}" class="active">About</a>
+                <a href="{{ url_for('teafinder') }}">Tea Finder </a>
+                <a href="{{ url_for('teatypes') }}">Tea Types</a>
+            </div>
+            <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()" aria-label="Toggle navigation menu">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </a>
+        </div>
+    </header>
+
+    <main class="container" id="main-home">
+        <section id="about">
+            <h2>Find the best tea for your health needs.</h2>
+            <p>
+                The Optimal Steep is a resource for exploring teas that support various health goals.</p>
+            <p>By factoring in your wellness needs and flavor preferences, it guides you toward herbal teas that offer
+                the most relevant benefits.</p>
+
+            <!-- Form for user input -->
+            <form id="tea-form-main">
+                <h3>Let's Get Started</h3>
+                <label for="health_concern">Enter a health concern (e.g., "anti-anxiety effects"):</label>
+                <input type="text" id="health_concern" name="health_concern" required>
+                <button type="submit">Get Tea Recommendations</button>
+            </form>
+
+            <div id="recommendations"></div>
+
+        </section>
+
+        <section id="quick-links">
+            <h3>Quick Links</h3>
+            <h4>For more advanced search, go to our <a href="{{ url_for('teafinder') }}">Tea Finder</a></h>
+                <p> -- </p>
+            <ul>
+                <li><a href="teafinder.html#one">Specify One Health Concern</a></li>
+                <li><a href="teafinder.html#multi">Specify Multiple Concerns</a></li>
+                <li><a href="teafinder.html#tea-chars">Filter By Specified Characteristics</a></li>
+                <li><a href="teafinder.html#two-compare">Compare Two Teas by Characteristic</a></li>
+            </ul>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 The Optimal Steep</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/hamburger.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/click.js') }}"></script>
+
+</body>
+
+</html>
